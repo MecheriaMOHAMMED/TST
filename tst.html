@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tst</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Form</title>
 </head>
 <body>
-   <form action="https://script.google.com/macros/s/AKfycby2a9HVkNNCngISn21HXHy4YFuuk-Tl83DdBBx43Sl8WqwdEiXnngiSercZSj4xz2un/exec" method="POST">
-       <input type="text" name="Full Name" placeholder="Full Name" required><br><br>
-       <input type="tel" name="Phone Number" placeholder="Phone Number" required><br><br>
-       <input type="text" name="Wilaya" placeholder="Wilaya" required><br><br>
-       <textarea name="Address" placeholder="Address" required></textarea><br><br>
-       <input type="text" name="Color" placeholder="Color" required><br><br>
-       <input type="text" name="Size" placeholder="Size" required><br><br>
-       <input type="number" name="Quantity" placeholder="Quantity" required><br><br>
-       <button type="submit">Submit Order</button>
-   </form>
-    <script>
-    document.querySelector("form").addEventListener("submit", function(e) {
-      e.preventDefault(); // Cancel redirect
-      this.submit();      // Submit silently
-    });
-  </script>
+
+  <!-- ✅ Hidden iframe to prevent redirect -->
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <!-- ✅ Form with target set to hidden iframe -->
+  <form action="https://script.google.com/macros/s/AKfycby2a9HVkNNCngISn21HXHy4YFuuk-Tl83DdBBx43Sl8WqwdEiXnngiSercZSj4xz2un/exec"
+        method="POST"
+        target="hidden_iframe"
+        id="order-form">
+
+    <input type="text" name="Full Name" placeholder="Full Name" required><br><br>
+    <input type="tel" name="Phone Number" placeholder="Phone Number" required><br><br>
+    <input type="text" name="Wilaya" placeholder="Wilaya" required><br><br>
+    <textarea name="Address" placeholder="Address" required></textarea><br><br>
+    <input type="text" name="Color" placeholder="Color" required><br><br>
+    <input type="text" name="Size" placeholder="Size" required><br><br>
+    <input type="number" name="Quantity" placeholder="Quantity" required><br><br>
+    
+    <button type="submit">Submit Order</button>
+  </form>
+
 </body>
 </html>
