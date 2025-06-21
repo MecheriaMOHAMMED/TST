@@ -8,7 +8,7 @@
 <body>
 
   <!-- ✅ Hidden iframe to prevent redirect -->
-  <iframe name="hidden_iframe" style="display:none;"></iframe>
+  <iframe name="hidden_iframe" style="display:none;" onload="document.getElementById('order-form').reset();"></iframe>
 
   <!-- ✅ Form with target set to hidden iframe -->
   <form action="https://script.google.com/macros/s/AKfycby2a9HVkNNCngISn21HXHy4YFuuk-Tl83DdBBx43Sl8WqwdEiXnngiSercZSj4xz2un/exec"
